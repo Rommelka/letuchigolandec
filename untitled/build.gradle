@@ -15,6 +15,8 @@ dependencies {
     // https://mvnrepository.com/artifact/net.dv8tion/JDA
     implementation group: 'net.dv8tion', name: 'JDA', version: '5.0.0-alpha.21'
 }
+task stage(dependsOn: ['build', 'clean'])
+build.mustRunAfter clean
 
 test {
     useJUnitPlatform()
